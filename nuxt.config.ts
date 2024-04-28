@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   fontawesome: {
     icons: {
       solid: ['moon', 'sun'],
-      brands: ['linkedin', 'github', 'whatsapp' ]
+      brands: ['linkedin', 'github', 'whatsapp','square-js' ]
     }
   },
   colorMode: {

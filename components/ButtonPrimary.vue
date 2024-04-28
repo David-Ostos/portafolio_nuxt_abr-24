@@ -2,7 +2,7 @@
   <div>
     <NuxtLink
     :to="link"
-      class="hvr-ripple-out inline-flex items-center justify-center px-6 py-3 text-base font-bold text-center text-dark rounded-md dark:text-white lg:px-7"
+      class="hvr-ripple-out inline-flex items-center justify-center px-6 py-3 text-base font-bold text-center bg-pr text-dark rounded-md dark:text-white lg:px-7"
     >
       {{ contenido }}
     </NuxtLink>
@@ -48,7 +48,7 @@ defineProps({
 .hvr-ripple-out:before {
   content: '';
   position: absolute;
-  border: #00dc82 solid 3px;
+  border: #02AC66 solid 3px;
   border-radius: 6px;
   top: 0;
   right: 0;

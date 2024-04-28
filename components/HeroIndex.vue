@@ -3,18 +3,19 @@
     <!-- ====== Hero Section Start -->
     <div class="-mx-4 relative bg-white dark:bg-dark pt-[120px] pb-[110px]">
       <div class="container mx-auto">
-        <div class="flex flex-wrap items-center ">
+        <div class="flex flex-wrap items-start ">
           <div class="w-full px-4 lg:w-5/12">
             <div class="hero-content">
-              <h1
-                class="mb-5 text-4xl font-bold !leading-[1.208] text-dark dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl uppercase"
+              <div
+                class="mt-12 mb-24 text-4xl font-medium text-dark dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl " 
               >
-                Programador<br />
-                Web
-              </h1>
-              <p class="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
+                <p><span><b>BIENVENIDOS</b></span></p>
+                <p><span class="lg:tracking-wider" >Soy David <b>Ostos</b></span></p>
+                <p class="leading-[0]"><span class="text-2xl lg:text-3xl lg:uppercase">Programador Full-Stack <b class="text-js" ><font-awesome :icon="['fab', 'square-js']" bounce style="--fa-animation-duration: 2s;"/></b></span> </p>
+              </div>
+              <!-- <p class="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
                 Mi nombre es <b class="dark:text-primary font-bold">David Ostos</b> y soy programador full stack con la tecnologia de <b class="dark:text-js font-bold">Javascript</b>
-              </p>
+              </p> -->
               <ul class="flex flex-wrap items-center">
                 <li>
                   <ButtonPrimary link="/about" contenido="Sobre Mí"/>
@@ -50,7 +51,7 @@
                 <img
                   src="https://cdn.tailgrids.com/2.0/image/marketing/images/hero/hero-image-01.png"
                   alt="hero"
-                  class="max-w-full lg:ml-auto"
+                  class="max-w-full lg:ml-auto -scale-x-100"
                 />
                 <span class="absolute -left-8 -bottom-8 z-[-1]">
                   <svg
