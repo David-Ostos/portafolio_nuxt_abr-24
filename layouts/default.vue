@@ -59,14 +59,14 @@
                       </li>
                     </template>
                     <div class="lg:ml-10 text-end">
-                      <button v-if="colorMode.preference === 'light' && open !== null"
+                      <button v-if="colorMode.preference === 'light'"
                         @click="colorMode.preference = 'dark'"
                         class="text-3xl "
                       >
                         <font-awesome icon="moon" />
                       </button>
       
-                      <button v-if="colorMode.preference === 'dark' && open !== null"
+                      <button v-if="colorMode.preference === 'dark'"
                         @click="colorMode.preference = 'light'"
                         class="text-3xl"
                       >
