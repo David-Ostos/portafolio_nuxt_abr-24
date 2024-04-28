@@ -1,18 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-/*   ssr: true,
+  ssr: true,
+/*   
   nitro: {
     prerender: {
       routes: ['/services','/about', '/', '/projects']
     }
   }, */
-  routeRules: { // hibrido para especificar el comportamiento de cada vista
+/*   routeRules: { // hibrido para especificar el comportamiento de cada vista
     '/': { prerender: true },
     '/about': { ssr: true },
     '/services': { ssr: false },
     '/projects': { prerender: true },
-  },
+  }, */
   modules: [
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
