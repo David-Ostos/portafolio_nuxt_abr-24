@@ -77,15 +77,9 @@
                 </nav>
               </div>
               <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
-                  <NuxtLink
-    
-                    class="py-3 text-base font-medium text-white rounded-md bg-primary px-7 hover:bg-blue-dark"
-                    >Iniciar Sesión
-                    </NuxtLink>
-                </div>
-
+                <ButtonPrimary link="/" contenido="Iniciar Sesión" />
+              </div>
             </div>
-  
           </div>
         </div>
       </header>
@@ -98,6 +92,7 @@
 
 <script lang="ts" setup>
 import { onMounted, onUnmounted, ref } from 'vue'
+import ButtonPrimary from '~/components/ButtonPrimary.vue';
 
 const colorMode = useColorMode()
 const open = ref(false)

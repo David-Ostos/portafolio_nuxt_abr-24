@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class=""> 
     <!-- ====== Hero Section Start -->
     <div class="-mx-4 relative bg-white dark:bg-dark pt-[120px] pb-[110px]">
@@ -14,43 +13,13 @@
                 Web
               </h1>
               <p class="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
-                Mi nombre es <b class="dark:text-primary font-bold">David Ostos</b> y soy programador web full stack con la tecnologia de <b class="dark:text-js font-bold">Javascript</b>
+                Mi nombre es <b class="dark:text-primary font-bold">David Ostos</b> y soy programador full stack con la tecnologia de <b class="dark:text-js font-bold">Javascript</b>
               </p>
-              <!-- <ul class="flex flex-wrap items-center">
+              <ul class="flex flex-wrap items-center">
                 <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-center text-white rounded-md bg-primary hover:bg-blue-dark lg:px-7"
-                  >
-                    Get Started
-                  </a>
+                  <ButtonPrimary link="/about" contenido="Sobre Mí"/>
                 </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="inline-flex items-center justify-center py-3 px-5 text-center text-base font-medium text-[#464646] dark:text-white hover:text-primary"
-                  >
-                    <span class="mr-2">
-                      <svg
-                        width="24"
-                        height="25"
-                        viewBox="0 0 24 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle cx="12" cy="12.6152" r="12" fill="#00dc82" />
-                        <rect x="7.99893" y="14.979" width="8.18182" height="1.63636" fill="white" />
-                        <rect x="11.2717" y="7.61523" width="1.63636" height="4.09091" fill="white" />
-                        <path
-                          d="M12.0898 14.1606L14.9241 11.0925H9.25557L12.0898 14.1606Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    Download App
-                  </a>
-                </li>
-              </ul> -->
+              </ul>
               <div class="clients pt-16">
                 <h6
                   class="flex items-center mb-6 text-xs font-normal text-body-color dark:text-dark-6"
@@ -126,11 +95,11 @@
     </div>
     <!-- ====== Hero Section End -->
   </div>
-  </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import ButtonPrimary from './ButtonPrimary.vue';
 const colorMode = useColorMode()
 
 const clients = ref([
