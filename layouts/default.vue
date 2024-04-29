@@ -4,7 +4,7 @@
   <!-- ====== Navbar Section Start -->
       <header class=" w-full  ">
         <div class="container">
-          <div class="relative -mx-4 flex items-center justify-between">
+          <div class=" flex items-center justify-between">
   
             <!-- logo -->
             <div class="w-60 max-w-full px-4">
@@ -98,7 +98,9 @@ const colorMode = useColorMode()
 const open = ref(false)
 const dropdownButtonRef = ref<HTMLButtonElement | null>(null)
 // colorMode.value = 'dark'
-console.log(colorMode);
+if(colorMode.value === 'system'){
+  colorMode.value = 'dark'
+}
 
 const toggleNavbar = () => {
   open.value = !open.value
