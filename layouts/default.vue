@@ -29,7 +29,7 @@
                   @click="toggleNavbar"
                   ref="dropdownButtonRef"
                   id="navbarToggler"
-                  class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                  class="absolute right-4 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
                     class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"
@@ -44,7 +44,7 @@
                 <nav
                   :class="{ hidden: !open }"
                   id="navbarCollapse"
-                  class="z-10 absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white dark:bg-dark-2 py-5 px-6 shadow transition-all lg:static lg:bg-transparent lg:block lg:w-full lg:max-w-full lg:shadow-none xl:ml-11 lg:dark:bg-transparent"
+                  class="z-10 absolute right-4 top-[67px] w-full max-w-[250px] rounded-lg bg-white dark:bg-dark-2 py-5 px-6 shadow transition-all lg:static lg:bg-transparent lg:block lg:w-full lg:max-w-full lg:shadow-none xl:ml-11 lg:dark:bg-transparent"
                 >
                   <ul class="block lg:flex">
                     <template v-for="(item, index) in navLinkItems" :key="index">
@@ -98,7 +98,10 @@ const colorMode = useColorMode()
 const open = ref(false)
 const dropdownButtonRef = ref<HTMLButtonElement | null>(null)
 // colorMode.value = 'dark'
-if(colorMode.value === 'system'){
+
+console.log(!open.value);
+
+if(colorMode.preference === 'system'){
   colorMode.value = 'dark'
 }
 
