@@ -10,6 +10,9 @@ export default {
     "./error.vue",
   ],
   theme: {
+    fontFamily: {
+      gothic: "Zen Kaku Gothic New",
+    },
     extend: {
       colors: {
         primary: "#02AC66",

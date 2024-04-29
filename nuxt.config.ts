@@ -2,18 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
-/*   
-  nitro: {
-    prerender: {
-      routes: ['/services','/about', '/', '/projects']
+  app: {
+    head:{
+      link: [
+        { rel: "preconnect" , href: "https://fonts.gstatic.com" },
+        { rel: "stylesheet" , href: "https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap"}
+      ],
     }
-  }, */
-/*   routeRules: { // hibrido para especificar el comportamiento de cada vista
-    '/': { prerender: true },
-    '/about': { ssr: true },
-    '/services': { ssr: false },
-    '/projects': { prerender: true },
-  }, */
+  },
   modules: [
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
@@ -32,7 +28,6 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**'],
   },
-  // css: ['~/assets/css/main.css'],
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
     configPath: 'tailwind.config',
@@ -40,11 +35,4 @@ export default defineNuxtConfig({
       level: 2
     },
   }
-  // postcss: {
-  //   plugins: {
-  //     tailwindcss: {},
-  //     autoprefixer: {},
-  //   },
-  // },
-
 })
