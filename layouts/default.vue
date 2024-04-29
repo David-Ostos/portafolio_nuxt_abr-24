@@ -59,15 +59,15 @@
                       </li>
                     </template>
                     <div class="lg:ml-10 text-end">
-                      <button v-if="colorMode.preference === 'light'"
-                        @click="colorMode.preference = 'dark'"
+                      <button v-if="colorMode.value === 'light'"
+                        @click="colorMode.value = 'dark'"
                         class="text-3xl "
                       >
                         <font-awesome icon="moon" />
                       </button>
       
-                      <button v-if="colorMode.preference === 'dark'"
-                        @click="colorMode.preference = 'light'"
+                      <button v-if="colorMode.value === 'dark'"
+                        @click="colorMode.value = 'light'"
                         class="text-3xl"
                       >
                       <font-awesome :icon="['fas', 'sun']" />
@@ -97,7 +97,7 @@ import ButtonPrimary from '~/components/ButtonPrimary.vue';
 const colorMode = useColorMode()
 const open = ref(false)
 const dropdownButtonRef = ref<HTMLButtonElement | null>(null)
-// colorMode.preference = 'dark'
+// colorMode.value = 'dark'
 console.log(colorMode);
 
 const toggleNavbar = () => {
