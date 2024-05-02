@@ -14,7 +14,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    '@vesp/nuxt-fontawesome'
+    '@vesp/nuxt-fontawesome',
+    "@nuxt/image"
   ],
   fontawesome: {
     icons: {

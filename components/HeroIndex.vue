@@ -10,7 +10,7 @@
                 class="mt-12 mb-24 text-4xl font-medium text-dark dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl font-gothic" 
               >
                 <p><span><b>BIENVENIDOS</b></span></p>
-                <p><span class="lg:tracking-wider" >Soy David <b>Ostos</b></span></p>
+                <p><span class="lg:tracking-wide" >Soy David <b>Ostos</b></span></p>
                 <p class="leading-[0]"><span class="text-2xl lg:text-3xl lg:uppercase">Programador Full-Stack <b class="text-js" ><font-awesome :icon="['fab', 'square-js']" bounce style="--fa-animation-duration: 2s;"/></b></span> </p>
               </div>
               <!-- <p class="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
