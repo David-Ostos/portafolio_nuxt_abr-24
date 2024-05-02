@@ -106,9 +106,9 @@ brandItems.value.sort(mezclar);
                 target="_blank"
                 class="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
               ><!-- condicion ? exprSiVerdadero : exprSiFalso -->
-                <NuxtImg :title="item.title" v-show="useColor.value == 'dark'" :src="item.dark" :alt="`${item.title} logo`" class=" h-28 max-w-28" />
+                <NuxtImg size="112px" preload loading="eager" :title="item.title" v-show="useColor.value == 'dark'" :src="item.dark" :alt="`${item.title} logo`" class=" h-28 " />
 
-                <NuxtImg :title="item.title" v-show="useColor.value == 'light'" :src="item.image" :alt="`${item.title} logo`" class=" h-28 " />
+                <NuxtImg size="112px" preload loading="eager" :title="item.title" v-show="useColor.value == 'light'" :src="item.image" :alt="`${item.title} logo`" class=" h-28 " />
               </a>
             </template>
           </div>
