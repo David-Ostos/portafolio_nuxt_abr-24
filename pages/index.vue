@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import BrandsIndex from '~/components/index/BrandsIndex.vue';
+import StacksIndex from '~/components/index/StacksIndex.vue';
 
 </script>
 
 <template>
   <HeroIndex/>
-  <BrandsIndex/>
+  <StacksIndex/>
 </template>

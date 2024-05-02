@@ -10,6 +10,8 @@ import dockerLogoDark from '/logos/icons8-docker-dark.svg'
 import postgresLogo from '/logos/icons8-postgresql-ligth.svg'
 import ubuntuLogo from '/logos/icons8-ubuntu-96.png'
 import nodeLogo from '/logos/icons8-node-js.svg'
+import mongodbLogo from '/logos/icons8-mongodb.svg'
+import capasitorLogo from '/logos/capacitorjs-pngrepo-com.png'
 
 const useColor = useColorMode()
 
@@ -61,6 +63,18 @@ const brandItems = ref([
     image: nodeLogo,
     dark:  nodeLogo,
     link: '#'
+  },
+  {
+    title: 'MongoDB',
+    image: mongodbLogo,
+    dark:  mongodbLogo,
+    link: '#'
+  },
+  {
+    title: 'Capacitor',
+    image: capasitorLogo,
+    dark:  capasitorLogo,
+    link: '#'
   }
 ])
 
@@ -84,9 +98,9 @@ brandItems.value.sort(mezclar);
                 :href="item.link"
                 class="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
               ><!-- condicion ? exprSiVerdadero : exprSiFalso -->
-                <NuxtImg v-show="useColor.value == 'dark'" :src="item.dark" :alt="`${item.title} logo`" class=" h-28" />
+                <NuxtImg v-show="useColor.value == 'dark'" :src="item.dark" :alt="`${item.title} logo`" class=" h-28 max-w-28" />
 
-                <NuxtImg v-show="useColor.value == 'light'" :src="item.image" :alt="`${item.title} logo`" class=" h-28" />
+                <NuxtImg v-show="useColor.value == 'light'" :src="item.image" :alt="`${item.title} logo`" class=" h-28 " />
               </a>
             </template>
           </div>
