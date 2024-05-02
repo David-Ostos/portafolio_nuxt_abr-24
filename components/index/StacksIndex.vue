@@ -12,69 +12,76 @@ import ubuntuLogo from '/logos/icons8-ubuntu-96.png'
 import nodeLogo from '/logos/icons8-node-js.svg'
 import mongodbLogo from '/logos/icons8-mongodb.svg'
 import capasitorLogo from '/logos/capacitorjs-pngrepo-com.png'
+import apacheLogo from '/logos/apache-pngrepo-com.png'
 
 const useColor = useColorMode()
 
 const brandItems = ref([
   {
-    title: 'Nuxt',
+    title: 'Nuxt Js',
     image: nuxtLogo,
     dark: nuxtLogo,
-    link: '#'
+    link: 'https://nuxt.com/'
   },
   {
     title: 'Vue Js',
     dark: vueLogo,
     image: vueLogo,
-    link: '#'
+    link: 'https://vuejs.org/'
   },
   {
-    title: 'Nest',
+    title: 'Nest Js',
     dark: nestLogo,
     image: nestLogo,
-    link: '#'
+    link: 'https://nestjs.com/'
   },
   {
     title: 'Tailwind',
     dark: tailwindLogo,
     image: tailwindLogo,
-    link: '#'
+    link: 'https://tailwindcss.com/'
   },
   {
     title: 'Docker',
     image: dockerLogo,
     dark:  dockerLogoDark,
-    link: '#',
+    link: 'https://www.docker.com/',
   },
   {
     title: 'Postgresql',
     image: postgresLogo,
     dark:  postgresLogo,
-    link: '#'
+    link: 'https://www.postgresql.org/'
   },
   {
-    title: 'Linux',
+    title: 'Linux Ubuntu',
     image: ubuntuLogo,
     dark:  ubuntuLogo,
-    link: '#'
+    link: 'https://ubuntu.com/'
   },
   {
     title: 'Node Js',
     image: nodeLogo,
     dark:  nodeLogo,
-    link: '#'
+    link: 'https://nodejs.org/'
   },
   {
     title: 'MongoDB',
     image: mongodbLogo,
     dark:  mongodbLogo,
-    link: '#'
+    link: 'https://www.mongodb.com/'
   },
   {
-    title: 'Capacitor',
+    title: 'Capacitor Js',
     image: capasitorLogo,
     dark:  capasitorLogo,
-    link: '#'
+    link: 'https://capacitorjs.com/'
+  },
+  {
+    title: 'Apache',
+    image: apacheLogo,
+    dark:  apacheLogo,
+    link: 'https://www.apache.org/'
   }
 ])
 
@@ -96,11 +103,12 @@ brandItems.value.sort(mezclar);
             <template v-for="(item, index) in brandItems" :key="index">
               <a
                 :href="item.link"
+                target="_blank"
                 class="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
               ><!-- condicion ? exprSiVerdadero : exprSiFalso -->
-                <NuxtImg v-show="useColor.value == 'dark'" :src="item.dark" :alt="`${item.title} logo`" class=" h-28 max-w-28" />
+                <NuxtImg :title="item.title" v-show="useColor.value == 'dark'" :src="item.dark" :alt="`${item.title} logo`" class=" h-28 max-w-28" />
 
-                <NuxtImg v-show="useColor.value == 'light'" :src="item.image" :alt="`${item.title} logo`" class=" h-28 " />
+                <NuxtImg :title="item.title" v-show="useColor.value == 'light'" :src="item.image" :alt="`${item.title} logo`" class=" h-28 " />
               </a>
             </template>
           </div>
