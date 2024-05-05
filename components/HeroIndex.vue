@@ -37,8 +37,6 @@
                     target="_blank"
                   >
                   <font-awesome :icon="[client.logo[0], client.logo[1]]"  />
-                    <!-- <img v-if="colorMode.preference === 'light'" :src="client.logo" :alt="client.name" width="100" height="100"/>                     
-                    <img v-if="colorMode.preference === 'dark'" :src="client.logoDark" :alt="client.name" width="100" height="100" />  -->
                   </a>
                 </div>
               </div>
@@ -101,7 +99,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import ButtonPrimary from './ButtonPrimary.vue';
-const colorMode = useColorMode()
 
 const clients = ref([
   {

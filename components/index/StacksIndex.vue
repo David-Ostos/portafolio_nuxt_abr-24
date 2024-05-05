@@ -13,6 +13,7 @@ import nodeLogo from '/logos/icons8-node-js.svg'
 import mongodbLogo from '/logos/icons8-mongodb.svg'
 import capasitorLogo from '/logos/capacitorjs-pngrepo-com.png'
 import apacheLogo from '/logos/apache-pngrepo-com.png'
+import tsLogo from '/logos/icons8-typescript.svg'
 
 const useColor = useColorMode()
 
@@ -82,6 +83,12 @@ const brandItems = ref([
     image: apacheLogo,
     dark:  apacheLogo,
     link: 'https://www.apache.org/'
+  },
+  {
+    title: 'Typescript',
+    image: tsLogo,
+    dark:  tsLogo,
+    link: 'https://www.typescriptlang.org/'
   }
 ])
 
@@ -95,7 +102,7 @@ brandItems.value.sort(mezclar);
 <template>
   <!-- ====== Brands Section Start -->
   <section class="bg-white py-20 dark:bg-dark lg:py-[120px]">
-    <h1 class="text-dark dark:text-white mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px] text-center font-gothic">Stack de Tecnologías</h1>
+    <TituloPrimary titulo="Stack de Tecnologías"/>
     <div class="container mx-auto">
       <div class="flex flex-wrap -mx-4">
         <div class="w-full px-4">
@@ -106,9 +113,9 @@ brandItems.value.sort(mezclar);
                 target="_blank"
                 class="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
               ><!-- condicion ? exprSiVerdadero : exprSiFalso -->
-                <NuxtImg size="112px" preload loading="eager" :title="item.title" v-show="useColor.value == 'dark'" :src="item.dark" :alt="`${item.title} logo`" class=" h-28 " />
+                <NuxtImg size="112px" preload loading="eager" :title="item.title" v-show="useColor.value === 'dark'" :src="item.dark" :alt="`${item.title} logo`" class=" h-28 " />
 
-                <NuxtImg size="112px" preload loading="eager" :title="item.title" v-show="useColor.value == 'light'" :src="item.image" :alt="`${item.title} logo`" class=" h-28 " />
+                <NuxtImg size="112px" preload loading="eager" :title="item.title" v-show="useColor.value === 'light'" :src="item.image" :alt="`${item.title} logo`" class=" h-28 " />
               </a>
             </template>
           </div>

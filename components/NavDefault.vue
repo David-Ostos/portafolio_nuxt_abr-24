@@ -89,9 +89,8 @@ import ButtonPrimary from '~/components/ButtonPrimary.vue';
 const colorMode = useColorMode()
 const open = ref(false)
 const dropdownButtonRef = ref<HTMLButtonElement | null>(null)
-// colorMode.value = 'dark'
-
-console.log(!open.value);
+if( colorMode.preference === 'system')
+  colorMode.value = 'dark'
 
 if(colorMode.preference === 'system'){
   colorMode.value = 'dark'
