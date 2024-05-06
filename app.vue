@@ -3,10 +3,12 @@
 const colorMode = useColorMode()
 
 // colorMode.preference = 'dark'
-if(colorMode.preference === 'system'){
-  colorMode.preference = 'dark'
-  console.log('si pasa');
-}
+onMounted(() => {
+  if(colorMode.preference === 'system'){
+    colorMode.preference = 'dark'
+    console.log('si pasa');
+  }
+})
 
 </script>
 
