@@ -89,6 +89,7 @@ import ButtonPrimary from '~/components/ButtonPrimary.vue';
 const colorMode = useColorMode()
 const open = ref(false)
 const dropdownButtonRef = ref<HTMLButtonElement | null>(null)
+console.log(colorMode);
 
 const toggleNavbar = () => {
   open.value = !open.value
