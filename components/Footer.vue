@@ -34,7 +34,7 @@ const menus = ref([
 
 <template>
   <!-- ====== Footer Section Start -->
-  <footer class="relative z-10 bg-white dark:bg-dark pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+  <footer class="relative z-0 bg-white dark:bg-dark pt-20 pb-10 lg:pt-[120px] lg:pb-20">
     <div class="container mx-auto">
       <div class="flex flex-wrap -mx-4">
         <div class="w-full px-4 sm:w-2/3 lg:w-3/12">
