@@ -3,18 +3,18 @@
     <TituloPrimary titulo="Mis Proyectos" />
     <div class="flex flex-wrap justify-between">
       <article v-for="proyecto, index in proyectos" :key="index" class="group w-full px-4 md:w-1/2 xl:w-1/3">
-        <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
+        <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat mx-auto">
           <img
           alt=""
           :src="proyecto.img"
           class="h-56 w-full rounded-xl object-cover shadow-xl max-w-xs transition duration-300 ease-in-out group-hover:scale-110"
           />
         </div>
-        <div class="p-4">
+        <div class="px-4 py-2 max-w-80 mx-auto w-full">
           <a href="#">
-            <h3 class="text-lg font-medium dark:text-white text-gray-900 line-clamp-1 hover:line-clamp-none">{{ proyecto.titulo }}</h3>
+            <h3 class="text-lg font-medium dark:text-white text-gray-900 max-w-xs text-center line-clamp-1 hover:line-clamp-none">{{ proyecto.titulo }}</h3>
           </a>
-          <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:line-clamp-none ">
+          <p class="max-w-xs  mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:line-clamp-none ">
             {{ proyecto.descripcion }}
           </p>
           <!-- botones de repo y demo -->
