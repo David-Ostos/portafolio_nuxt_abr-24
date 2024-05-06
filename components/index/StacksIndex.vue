@@ -15,87 +15,96 @@ import capasitorLogo from '/logos/capacitorjs-pngrepo-com.png'
 import apacheLogo from '/logos/apache-pngrepo-com.png'
 import tsLogo from '/logos/icons8-typescript.svg'
 
-const useColor = useColorMode()
+interface Brands {
+  title: string;
+  image: string;
+  dark: string;
+  link: string;
+}
 
-const brandItems = ref([
-  {
-    title: 'Nuxt Js',
-    image: nuxtLogo,
-    dark: nuxtLogo,
-    link: 'https://nuxt.com/'
-  },
-  {
-    title: 'Vue Js',
-    dark: vueLogo,
-    image: vueLogo,
-    link: 'https://vuejs.org/'
-  },
-  {
-    title: 'Nest Js',
-    dark: nestLogo,
-    image: nestLogo,
-    link: 'https://nestjs.com/'
-  },
-  {
-    title: 'Tailwind',
-    dark: tailwindLogo,
-    image: tailwindLogo,
-    link: 'https://tailwindcss.com/'
-  },
-  {
-    title: 'Docker',
-    image: dockerLogo,
-    dark:  dockerLogoDark,
-    link: 'https://www.docker.com/',
-  },
-  {
-    title: 'Postgresql',
-    image: postgresLogo,
-    dark:  postgresLogo,
-    link: 'https://www.postgresql.org/'
-  },
-  {
-    title: 'Linux Ubuntu',
-    image: ubuntuLogo,
-    dark:  ubuntuLogo,
-    link: 'https://ubuntu.com/'
-  },
-  {
-    title: 'Node Js',
-    image: nodeLogo,
-    dark:  nodeLogo,
-    link: 'https://nodejs.org/'
-  },
-  {
-    title: 'MongoDB',
-    image: mongodbLogo,
-    dark:  mongodbLogo,
-    link: 'https://www.mongodb.com/'
-  },
-  {
-    title: 'Capacitor Js',
-    image: capasitorLogo,
-    dark:  capasitorLogo,
-    link: 'https://capacitorjs.com/'
-  },
-  {
-    title: 'Apache',
-    image: apacheLogo,
-    dark:  apacheLogo,
-    link: 'https://www.apache.org/'
-  },
-  {
-    title: 'Typescript',
-    image: tsLogo,
-    dark:  tsLogo,
-    link: 'https://www.typescriptlang.org/'
-  }
-])
+const useColor = useColorMode()
+let brandItems = ref<Brands[]>() ;
+onMounted(() => {
+  brandItems.value = [
+    {
+      title: 'Nuxt Js',
+      image: nuxtLogo,
+      dark: nuxtLogo,
+      link: 'https://nuxt.com/'
+    },
+    {
+      title: 'Vue Js',
+      dark: vueLogo,
+      image: vueLogo,
+      link: 'https://vuejs.org/'
+    },
+    {
+      title: 'Nest Js',
+      dark: nestLogo,
+      image: nestLogo,
+      link: 'https://nestjs.com/'
+    },
+    {
+      title: 'Tailwind',
+      dark: tailwindLogo,
+      image: tailwindLogo,
+      link: 'https://tailwindcss.com/'
+    },
+    {
+      title: 'Docker',
+      image: dockerLogo,
+      dark:  dockerLogoDark,
+      link: 'https://www.docker.com/',
+    },
+    {
+      title: 'Postgresql',
+      image: postgresLogo,
+      dark:  postgresLogo,
+      link: 'https://www.postgresql.org/'
+    },
+    {
+      title: 'Linux Ubuntu',
+      image: ubuntuLogo,
+      dark:  ubuntuLogo,
+      link: 'https://ubuntu.com/'
+    },
+    {
+      title: 'Node Js',
+      image: nodeLogo,
+      dark:  nodeLogo,
+      link: 'https://nodejs.org/'
+    },
+    {
+      title: 'MongoDB',
+      image: mongodbLogo,
+      dark:  mongodbLogo,
+      link: 'https://www.mongodb.com/'
+    },
+    {
+      title: 'Capacitor Js',
+      image: capasitorLogo,
+      dark:  capasitorLogo,
+      link: 'https://capacitorjs.com/'
+    },
+    {
+      title: 'Apache',
+      image: apacheLogo,
+      dark:  apacheLogo,
+      link: 'https://www.apache.org/'
+    },
+    {
+      title: 'Typescript',
+      image: tsLogo,
+      dark:  tsLogo,
+      link: 'https://www.typescriptlang.org/'
+    }
+  ]
+  brandItems.value!.sort(mezclar);
+})
 
 function mezclar(a: any, b: any) {
   return 0.5 - Math.random();
 }
-brandItems.value.sort(mezclar);
 
 </script>
 

@@ -6,7 +6,6 @@ const colorMode = useColorMode()
 onMounted(() => {
   if(colorMode.preference === 'system'){
     colorMode.preference = 'dark'
-    console.log('si pasa');
   }
 })
 

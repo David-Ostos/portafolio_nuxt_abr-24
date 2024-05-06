@@ -89,10 +89,8 @@ import ButtonPrimary from '~/components/ButtonPrimary.vue';
 const colorMode = useColorMode()
 const open = ref(false)
 const dropdownButtonRef = ref<HTMLButtonElement | null>(null)
-console.log(colorMode);
 if(colorMode.preference === 'system'){
   colorMode.preference = 'dark'
-  console.log('si pasa');
 }
 
 const toggleNavbar = () => {
