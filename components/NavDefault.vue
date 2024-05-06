@@ -56,15 +56,15 @@
                       </li>
                     </template>
                     <div class="lg:ml-10 text-end">
-                      <button v-if="colorMode.value === 'light'"
-                        @click="colorMode.value = 'dark'"
+                      <button v-if="colorMode.preference === 'light'"
+                        @click="colorMode.preference = 'dark'"
                         class="text-3xl "
                       >
                         <font-awesome icon="moon" />
                       </button>
       
-                      <button v-if="colorMode.value === 'dark'"
-                        @click="colorMode.value = 'light'"
+                      <button v-if="colorMode.preference === 'dark'"
+                        @click="colorMode.preference = 'light'"
                         class="text-3xl"
                       >
                       <font-awesome :icon="['fas', 'sun']" />

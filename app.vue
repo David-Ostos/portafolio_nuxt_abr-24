@@ -2,12 +2,13 @@
 
 const colorMode = useColorMode()
 
-colorMode.preference = 'dark'
+// colorMode.preference = 'dark'
 
 </script>
 
 <template>
-  <div class="dark:bg-dark min-h-screen dark:text-white">
+  <div class="dark:bg-dark dark:text-white"
+    :style="`max-heigh: 100vh + `">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
