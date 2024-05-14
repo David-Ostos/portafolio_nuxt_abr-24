@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     head:{
+      script:[
+        {src: "https://accounts.google.com/gsi/client", async: true}
+      ],
       meta:[
         {property: "og:title", content: "David Ostos - portafolio"},
         {property: "og:description", content: "Portafolio de mis habilidades y experiencias"},

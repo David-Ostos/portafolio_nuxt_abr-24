@@ -29,7 +29,7 @@
                   class="absolute right-4 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
-                    class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"
+                    class="relative my-[6px] block h-[2px] w-[30px] text-dark bg-body-color dark:bg-white"
                   ></span>
                   <span
                     class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"
@@ -74,7 +74,7 @@
                 </nav>
               </div>
               <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
-                <ButtonPrimary link="/" contenido="Iniciar Sesión" />
+                <ButtonPrimary link="login" contenido="Iniciar Sesión" />
               </div>
             </div>
           </div>
